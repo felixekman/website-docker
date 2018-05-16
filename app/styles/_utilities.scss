@@ -1,0 +1,62 @@
+
+// padding & margin
+
+@each $quantifier, $multiple in ( 6: 6, 7: 12 ) {
+
+    @each $code, $property in ( m: margin, p: padding ) {
+
+        .#{$code}-#{$quantifier} {
+            #{$property}: $spacer * $multiple;
+        }
+
+        @each $direction, $properties in ( t: [ -top ], r: [ -right ], b: [ -bottom ], l: [ -left ], x: [ -right, -left ], y: [ -top, -bottom ] ) {
+
+            .#{$code}#{$direction}-#{$quantifier} {
+
+                @each $property-dir in $properties {
+                    #{$property}#{$property-dir}: $spacer * $multiple;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+// typograhphy
+
+strong {
+    font-weight: $font-weight-bold;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.list-no-bullet {
+    list-style: none;
+    padding-left: 0;
+}
+
+.clickable {
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+// functions
+
+@function theme-color($key) {
+    @if map-has-key($theme-colors, $key) {
+        @return map-get($theme-colors, $key);
+    }
+    @return null;
+}

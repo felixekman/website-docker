@@ -1,0 +1,29 @@
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 0
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - breakpoint
+        - mq
+
+  no-warn: 1
+  no-debug: 1
+  no-ids: 0
+  no-important: 0
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  indentation: 0
+  property-sort-order: 0
+  nesting-depth: 0
+  no-duplicate-properties: 0
+  single-line-per-selector: 0
+  no-transition-all: 0
+  quotes: 0
+  space-after-comma: 0
+  no-vendor-prefixes: 0
+  no-color-keywords: 0

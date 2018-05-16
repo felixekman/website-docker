@@ -1,0 +1,12 @@
+<p>
+    <span class="text-primary clickable collapse-expand" onclick="$('.faq-collapse').collapse('show'); $(this).hide(); $('.collapse-retract').show();">Expand all</span>
+    <span class="text-primary clickable collapse-retract" style="display: none;" onclick="$('.faq-collapse').collapse('hide'); $(this).hide(); $('.collapse-expand').show();">Retract all</span>
+</p>
+<dl>
+{{#each faqs as |faq index|}}
+    <dt data-toggle="collapse" href="#faq{{index}}" aria-expanded="true" aria-controls="faq{{index}}">{{faq.question}}</dt>
+    <dd id="faq{{index}}" class="collapse faq-collapse" role="tabpanel">
+        {{markdown-to-html faq.answer}}
+    </dd>
+{{/each}}
+</dl>

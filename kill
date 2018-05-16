@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export COMPOSE_PROJECT_NAME=harmony
+
+docker-compose kill
+docker-compose rm -f
+
+docker ps
+
+docker system prune -f

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col py-5">
+            <h2>Resources</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex col-12 col-sm-4 mb-3">
+            <div class="card">
+                <img src="/assets/placeholder-blog.jpg" class="card-img-top" alt="HarmonyPSA Blog Image">
+                <div class="card-body">
+                    <h6 class="mb-3 text-uppercase">From the blog</h6>
+                    {{#each articles as |article|}}
+                    <p class="mb-2"><a href="{{article.url}}">{{article.title}}</a></p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-12 col-sm-4 mb-3">
+            <div class="card">
+                <img src="/assets/placeholder-whitepapers.jpg" class="card-img-top" alt="HarmonyPSA Whitepaper Image">
+                <div class="card-body">
+                    <h6 class="mb-3 text-uppercase">Whitepaper</h6>
+                    {{#each whitepapers as |whitepaper|}}
+                    <p class="mb-2">{{#link-to 'resources.whitepapers'}}{{whitepaper.name}}{{/link-to}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-12 col-sm-4 mb-3">
+            <div class="card">
+                <img src="/assets/placeholder-video.jpg" class="card-img-top" alt="HarmonyPSA Video Image">
+                <div class="card-body">
+                    <h6 class="mb-3 text-uppercase">Video</h6>
+                    {{#each videos as |video|}}
+                    <p class="mb-2"><a target="_blank" href="{{video.link}}">{{video.name}}</a></p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

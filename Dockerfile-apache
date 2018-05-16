@@ -1,0 +1,8 @@
+FROM httpd:2.4-alpine
+
+RUN mkdir -p /root/certs/
+COPY ./apache/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./apache/httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
+COPY ./certs/wildcard_harmonypsa_com.crt /root/certs/wildcard_harmonypsa_com.crt
+COPY ./certs/wildcard_harmonypsa_com.key /root/certs/wildcard_harmonypsa_com.key
+COPY ./certs/CACert.crt /root/certs/CACert.crt

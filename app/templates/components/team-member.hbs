@@ -1,0 +1,9 @@
+{{#if simple}}
+    <div class="display-3">{{team.name}}</div>
+    <p><strong>{{team.position}}</strong></p>
+    {{markdown-to-html team.introduction}}
+{{else}}
+    {{markdown-to-html team.introduction}}
+    <p>- {{team.name}}, {{team.title}}</p>
+    {{markdown-to-html team.biography class="small"}}
+{{/if}}

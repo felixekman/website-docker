@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col text-center py-5">
+            <h1>{{model.title}}</h1>
+            <div class="lead">
+                {{markdown-to-html model.lead}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item text-center">
+                    {{#link-to 'resources.blog' class="nav-link text-dark px-4"}}
+                        <div class="resources-icons-sprite book"></div>
+                        {{model.contentArea1}}
+                    {{/link-to}}
+                </li>
+                <li class="nav-item text-center">
+                    {{#link-to 'resources.whitepapers' class="nav-link text-dark px-4"}}
+                        <div class="resources-icons-sprite whitepaper"></div>
+                        {{model.contentArea2}}
+                    {{/link-to}}
+                </li>
+                <li class="nav-item text-center">
+                    {{#link-to 'resources.video' class="nav-link text-dark px-4"}}
+                        <div class="resources-icons-sprite video"></div>
+                        {{model.contentArea3}}
+                    {{/link-to}}
+                </li>
+                <li class="nav-item text-center">
+                    {{#link-to 'resources.news' class="nav-link text-dark px-4"}}
+                        <div class="resources-icons-sprite whitepaper"></div>
+                        {{model.contentArea4}}
+                    {{/link-to}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{outlet}}
+{{call-to-action-sidebar}}

@@ -1,0 +1,6 @@
+<p><strong class="d-none d-md-inline">Click to explore:</strong></p>
+<p>
+{{#each features as |feature index|}}
+    <a {{action 'triggerGoToSlide' index}} class="carousel-link {{if (eq slideIndex index) 'active'}}" href="#">{{feature.title}}</a>
+{{/each}}
+</p>

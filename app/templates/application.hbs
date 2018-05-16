@@ -1,0 +1,35 @@
+{{head-layout}}
+<div class="fixed-top bg-white fixed-main-nav-bar">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-12">
+                {{main-navbar}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="{{dot-to-dash routing.currentRouteName}}" style="margin-top: 70px;">
+    {{outlet}}
+</div>
+<footer class="container">
+    <div class="row justify-content-center">
+        <div class="col-10 text-center pt-5">
+            <p>Need to get in touch? Call us on <a href="tel:+442033270460">+44 203 327 0460</a> or email <a href="mailto:info@harmonypsa.com">info@harmonypsa.com</a></p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-10 text-center">
+            <hr>
+            {{social-icon platform="twitter" href="https://twitter.com/harmonypsa"}}
+            {{social-icon platform="linkedin" href="https://www.linkedin.com/company/harmony-business-systems/"}}
+            {{social-icon platform="rss" href="https://blog.harmonypsa.com/"}}
+            {{social-icon platform="vimeo" href="https://vimeo.com/harmonypsa"}}
+            <p class="text-secondary"><small>{{moment-format (now) 'YYYY'}} &copy; Copyright Harmony Business Systems Ltd. All rights Reserved.</small></p>
+            <p class="text-secondary"><small>{{#link-to "privacy-policy" class="text-secondary"}}privacy policy{{/link-to}} | {{#link-to "terms" class="text-secondary"}}terms and conditions{{/link-to}}</small></p>
+			<a href="https://www.contentful.com/" rel="nofollow" target=“_blank”><img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg" style="max-width:100px;width:100%;" alt="Powered by Contentful" /></a>
+		</div>
+    </div>
+</footer>
+{{request-quote-form}}
+{{request-demo-form}}
+{{request-feature-list-form}}

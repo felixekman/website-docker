@@ -1,0 +1,39 @@
+{{#if testimonials}}
+<div class="{{if dark 'bg-dark text-white'}}">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col py-5">
+                <h2>What our customers say about HarmonyPSA</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-center">
+    <div class="row text-white">
+        <div class="customer-quote col-12 col-sm-4 p-4" style="background-image:url(/assets/customer-quote-bg-two.jpg)">
+            <p class="display-3">{{get (testimonial testimonials 0) 'company'}}</p>
+            <p class="display-4 mb-0">&ldquo;{{get (testimonial testimonials 0) 'quote'}}&rdquo;</p>
+            <img class="customer-quote-logo py-6" src="/assets/harmony-psa-logo-white-small.svg">
+
+            <p class="display-3">{{get (testimonial testimonials 1) 'company'}}</p>
+            <p class="display-4 mb-0">&ldquo;{{get (testimonial testimonials 1) 'quote'}}&rdquo;</p>
+        </div>
+        <div class="customer-quote col-12 col-sm-4 p-4 {{bgClass}}">
+            <p class="display-3">{{get (testimonial testimonials 2) 'company'}}</p>
+            <p class="display-4 mb-0">&ldquo;{{get (testimonial testimonials 2) 'quote'}}&rdquo;</p>
+            <img class="customer-quote-logo py-6" src="/assets/harmony-psa-logo-white-small.svg">
+            <p>All independent customer reviews of<br>
+                HarmonyPSA from Capterra.</p>
+            <p><a target="_blank" href="https://www.capterra.com/p/133954/HarmonyPSA/" class="text-white">Visit Capterra to read more.</a></p>
+            <a target="_blank" href="https://www.capterra.com/p/133954/HarmonyPSA/"><img class="capterra-logo" src="/assets/capterra-reviews-logo.png" alt="HarmonyPSA five star Capterra reviews"></a>
+        </div>
+        <div class="customer-quote col-12 col-sm-4 p-4" style="background-image:url(/assets/customer-quote-bg-one.jpg)">
+            <p class="display-3">{{get (testimonial testimonials 3) 'company'}}</p>
+            <p class="display-4 mb-0">&ldquo;{{get (testimonial testimonials 3) 'quote'}}&rdquo;</p>
+            <img class="customer-quote-logo py-6" src="/assets/harmony-psa-logo-white-small.svg">
+            <p class="display-3">{{get (testimonial testimonials 4) 'company'}}</p>
+            <p class="display-4 mb-0">&ldquo;{{get (testimonial testimonials 4) 'quote'}}&rdquo;</p>
+        </div>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,66 @@
+<div class="bg-secondary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3 pt-5 text-center">
+                <img class="img-fluid" src="{{featuredVideo.screenshot.file.url}}">
+            </div>
+            <div class="col-8 col-md-7 py-5">
+                <p>Featured Video</p>
+                <h2>{{featuredVideo.name}}</h2>
+                {{markdown-to-html featuredVideo.description}}
+                {{markdown-to-html featuredVideo.hubSpotEmbedCode}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+{{#each secondaryVideos as |video|}}
+    <div class="row justify-content-center">
+        <div class="col-4 col-md-3">
+            <img class="img-fluid" src="{{video.screenshot.file.url}}">
+        </div>
+        <div class="col-8 col-md-7">
+            <h3 class="mb-3">{{video.name}}</h3>
+            {{markdown-to-html video.description}}
+            {{markdown-to-html video.hubSpotEmbedCode}}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <hr class="my-3">
+        </div>
+    </div>
+{{/each}}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [
+    { 
+      "@type": "ListItem", 
+      "position": "1", 
+      "item": { 
+        "@id": "https://www.harmonypsa.com", 
+        "name": "HarmonyPSA" 
+      } 
+    },
+    { 
+      "@type": "ListItem", 
+      "position": "2", 
+      "item": { 
+        "@id": "https://www.harmonypsa.com/resources", 
+        "name": "Resources" 
+      } 
+    },
+    { 
+      "@type": "ListItem", 
+      "position": "3", 
+      "item": { 
+        "@id": "https://www.harmonypsa.com/resources/video", 
+        "name": "Video" 
+      } 
+    }
+  ]
+}
+</script>
+</div>

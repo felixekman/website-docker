@@ -1,0 +1,37 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+#certs
+/certs
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log*
+yarn-error.log
+testem.log
+.DS_Store
+yarn.lock
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/jsLibraryMappings.xml
+.idea/libraries/HarmonyStaticWebsite_node_modules.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+HarmonyStaticWebsite.iml
